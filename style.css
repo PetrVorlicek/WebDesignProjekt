@@ -1,0 +1,233 @@
+html {
+    font-family: sans-serif;
+}
+
+.debug {
+    border: 1px solid red;
+}
+
+/*site*/
+.site__header, .grid__authors {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.site__content {
+}
+
+.site__nav {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #193b09;
+    opacity: 95%;
+    z-index: 1;
+}
+
+#site__nav_drop {
+    width: 100%;
+    height: 30px;
+    margin: 0 auto;
+}
+
+#site__nav_drop:checked + label {
+    height: 0;
+    display: block; }
+
+.site__nav ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-content: space-evenly;
+    height: 500px;
+    width: 50%;
+    margin: auto;
+}
+
+.site__nav li {
+    display: block;
+}
+
+.site__nav a {
+    display: block;
+    width: 500px;
+    height: 20px;
+    margin: 5px 0;
+    text-align: center;
+    border: 2px solid green;
+    background-color: white;
+    opacity: 100%;
+}
+
+
+.site__footer {
+    position: relative;
+    bottom: 0;
+    width: auto;
+    color: white;
+    background-color: #193b09;
+    height: 20px;
+    padding: 80px 10px 50px 10px;
+    margin: 0;
+}
+
+/*portraits*/
+.portraits {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    height: 500px;
+    width: 100%;
+    background-color: #90A955;
+}
+
+.portraits__portrait {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 0;
+}
+
+.portraits__portrait_img {
+    height: 300px;
+}
+
+.about {
+    margin: 10px 25px;
+}
+
+.about p {
+    text-align: justify;
+}
+
+.about__secondary {
+    display: none;
+}
+
+/*weather*/
+.weather {
+    margin: 5px 0;
+    background-color: #ECF39E;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+.weather__fig {
+    grid-column: 1  /span 1;
+    grid-row: 1 /span 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0;
+}
+
+.weather__fig_img {
+    width: 100%;
+    height: 75%;
+}
+
+.weather__temp, .weather__rain, .weather__humidity, .weather__wind, .weather__bio {
+    width: 100%;
+    margin: auto;
+    text-align: center;
+}
+.weather__temp {
+    grid-column: 2  /span 1;
+    grid-row: 1 /span 1;
+}
+.weather__rain {
+    grid-column: 2  /span 1;
+    grid-row: 2 /span 1;
+}
+.weather__humidity, .weather__wind, .weather__bio {
+    display: none;
+}
+
+/*news*/
+
+.news__article {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    grid-template-rows: 1fr 1fr;
+    margin: 10px 25px;
+    grid-gap: 10px;
+}
+
+.news__article img {
+    height: 250px;
+    grid-column: 1 / span 1;
+    grid-row: 1 / span 2;
+}
+
+.news__article h3 {
+    grid-column: 2 / span 1;
+    grid-row: 1 / span 1;
+}
+
+.news__article p {
+    grid-column: 2 / span 1;
+    grid-row: 2 / span 1;
+}
+
+@media only screen and (min-width: 1000px)
+
+{
+    /*site*/
+
+    /*weather*/
+    .weather {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    .weather__humidity, .weather__wind, .weather__bio {
+        display: block;
+    }
+    .weather__fig{
+        grid-column: 1  /span 1;
+        grid-row: 1 /span 1;
+    }
+    .weather__temp{
+        grid-column: 2  /span 1;
+        grid-row: 1 /span 1;
+    }
+    .weather__rain{
+        grid-column: 3  /span 1;
+        grid-row: 1 /span 1;
+    }
+    .weather__humidity{
+        grid-column: 1  /span 1;
+        grid-row: 2 /span 1;
+    }
+     .weather__wind{
+         grid-column: 2  /span 1;
+         grid-row: 2 /span 1;
+     }
+     .weather__bio{
+         grid-column: 3  /span 1;
+         grid-row: 2 /span 1;
+     }
+    /*portraits*/
+    .grid__authors {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+    }
+
+    .portraits {
+        grid-column: 1 / span 1;
+        flex-direction: column;
+        height: auto;
+        padding: 10px 0;
+    }
+
+    .about {
+        grid-column: 2 / span 1;
+    }
+
+    .about__secondary {
+        display: block;
+    }
+}
