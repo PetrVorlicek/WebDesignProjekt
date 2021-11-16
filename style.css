@@ -15,6 +15,10 @@ html {
                             "news";
 }
 
+p {
+    text-align: justify;
+}
+
 .grid__authors {
     grid-area: authors;
 }
@@ -31,9 +35,6 @@ html {
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-
-.site__content {
 }
 
 .site__nav {
@@ -62,21 +63,19 @@ html {
 }
 
 .site__nav a {
-    text-align: center;
-    border: 2px solid green;
     background-color: white;
+    border: 2px solid green;
+    text-align: center;
 }
 
 
 .site__footer {
     position: relative;
-    bottom: 0;
-    width: auto;
+    clear: both;
     color: white;
     background-color: #193b09;
     height: 20px;
     padding: 80px 10px 50px 10px;
-    margin: 0;
 }
 
 .news {
@@ -109,10 +108,6 @@ html {
 
 .about {
     margin: 10px 25px;
-}
-
-.about p {
-    text-align: justify;
 }
 
 .about__secondary {
@@ -191,6 +186,10 @@ html {
 .news__article p {
     grid-column: 2 / span 1;
     grid-row: 2 / span 1;
+}
+
+.grid__article-detail {
+    margin: 5px 25px;
 }
 
 
