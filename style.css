@@ -1,6 +1,4 @@
-html {
-    font-family: sans-serif;
-}
+
 /* FONTY OD SIMČI začátek
 .site__header h1{
     font-family: 'Arvo', serif;
@@ -38,10 +36,6 @@ p {
 }
 FONTY OD SIMČI konec */
 
-.debug {
-    border: 1px solid red;
-}
-
 /*site*/
 .grid {
     display: grid;
@@ -65,6 +59,12 @@ FONTY OD SIMČI konec */
 
 .grid__authors, .grid__weather, .grid__news {
     margin-top: 10px;
+}
+
+.site {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 .site__header, .grid__authors {
@@ -131,8 +131,7 @@ h2{                                     /*simča*/
 
 
 .site__footer {
-    position: relative;
-    clear: both;
+    margin-top: auto;
     color: white;
     background-color: #193b09;
     height: 20px;
@@ -294,6 +293,71 @@ h2{                                     /*simča*/
     margin: 5px 25px;
 }
 
+/*Detail článku*/
+.detail {
+    padding: 25px 50px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto 1fr auto 50px;
+    grid-row-gap: 75px;
+    grid-template-areas: "header"
+                            "image"
+                            "content"
+                            "discussion"
+                            "footer";
+}
+
+.detail_header {
+    grid-area: header;
+}
+
+.detail__images {
+    grid-area: image;
+}
+
+.detail__images_image img {
+    max-width: 100%;
+}
+
+.detail__content {
+    grid-area: content;
+}
+.detail__footer {
+    grid-area: footer;
+    opacity: 75%;
+}
+
+.detail__discussion {
+    grid-area: discussion;
+    background-color: #afc185;
+}
+
+.detail__discussion_comments {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.detail__discussion_comments li {
+    background-color: #90A955;
+    padding: 10px 50px;
+    margin: 10px 0;
+}
+
+.detail__discussion_add
+{
+    padding: 10px 10%;
+}
+.detail__discussion_add label, input {
+    display: block;
+}
+
+#detail__discussion_add-comment {
+    width: 100%;
+    height: 250px;
+    resize: none;
+}
 
 @media only screen and (min-width: 813px) /* větší než iphone X */
 {
@@ -398,9 +462,19 @@ h2{                                     /*simča*/
         display: none;
     }
 
-}
+    /*Detail*/
+    .detail {
+        grid-template-columns: 1fr 3fr;
+        grid-template-rows: auto 1fr auto 50px;
+        grid-row-gap: 75px;
+        grid-template-areas: "header header"
+                            "image content"
+                            "discussion discussion"
+                            "footer footer";
+    }
 
-@media only screen and (min-width: 1400px) /*  */
+}
+@media only screen and (min-width: 1400px)
 {
     .grid {
         grid-template-columns: 2fr 1fr;
