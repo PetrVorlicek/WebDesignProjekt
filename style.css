@@ -77,7 +77,8 @@ FONTY OD SIMČI konec */
     font-family: 'Arvo', serif;         /*simča*/
     font-weight: 700;                   /*simča*/
     text-transform: uppercase;          /*simča*/
-    font-size: 350%;                    /*simča*/
+    font-size: 350%;
+    text-align: center                  /*simča*/
 }
 
 .site__header p {                       /*simča*/
@@ -125,7 +126,7 @@ h2{                                     /*simča*/
 
 .site__nav a, .news__nav a{
     background-color: white;
-    border: 2px solid green;
+    border: 2px solid #193b09;
     text-align: center;
 }
 
@@ -138,8 +139,7 @@ h2{                                     /*simča*/
     padding: 80px 10px 50px 10px;
 }
 
-.news {
-    color: white;
+.news{
     background-color: #afc185;
 }
 
@@ -230,6 +230,10 @@ h2{                                     /*simča*/
                             ".";
 }
 
+.news seciton {
+    grid-column: 1 / span 2;
+}
+
 .news__nav {
     grid-area: nav;
     background-color: #193b09;
@@ -253,7 +257,7 @@ h2{                                     /*simča*/
 .news__article {
     display: grid;
     grid-template-columns: 250px 1fr;
-    grid-template-rows: 1fr 1fr 2fr;
+    grid-template-rows: auto 1fr auto;
     grid-template-areas: "img header"
                             "img perex"
                             "text text";
@@ -271,7 +275,18 @@ h2{                                     /*simča*/
     font-family: 'Oswald', sans-serif;          /*simča*/
     font-size: 170%;                            /*simča*/
     font-variant: small-caps;                   /*simča*/
-    color: #005300;                             /*simča*/
+                                 /*simča*/
+}
+
+.news__article a:link, a:visited {
+    text-decoration: none;
+    color: #005300;
+}
+
+.news__article a:hover {
+    text-decoration: underline;
+    color: white;
+    transition-duration: 0.5s;
 }
 
 .news__article h4{                              /*simča*/ /*až budou ty články, bude třeba tam mít perex, dala jsem mu h4*/
@@ -357,6 +372,30 @@ h2{                                     /*simča*/
     width: 100%;
     height: 250px;
     resize: none;
+}
+
+/*Kategorie*/
+
+.site__categories {
+    display: flex;
+    flex-direction: column;
+    background-color: #90A955;
+}
+
+.category {
+    border: 3px solid #193b09;
+    border-radius: 15px;
+    background-color: #afc185;
+    opacity: 90%;
+    margin: 5px
+}
+
+.category a {
+    margin-left: 25px;
+}
+
+.category hr {
+    border-color: #005300;
 }
 
 @media only screen and (min-width: 813px) /* větší než iphone X */
