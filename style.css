@@ -1,6 +1,42 @@
 html {
     font-family: sans-serif;
 }
+/* FONTY OD SIMČI začátek
+.site__header h1{
+    font-family: 'Arvo', serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 350%;
+}
+.site__header p {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+    font-style: italic;
+    font-size: 160%;
+}
+
+h2{
+    font-family: 'Arvo', serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: xx-large;
+    text-align: center;
+}
+
+h3 {
+    font-family: 'Oswald', sans-serif;
+    font-size: x-large;
+    font-variant: small-caps;
+}
+
+h4{
+    font-family: 'Raleway', sans-serif;
+}
+
+p {
+    font-family: 'Roboto Condensed', sans-serif;
+}
+FONTY OD SIMČI konec */
 
 .debug {
     border: 1px solid red;
@@ -35,6 +71,31 @@ p {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.site__header h1{                       /*simča*/
+    font-family: 'Arvo', serif;         /*simča*/
+    font-weight: 700;                   /*simča*/
+    text-transform: uppercase;          /*simča*/
+    font-size: 350%;                    /*simča*/
+}
+
+.site__header p {                       /*simča*/
+    font-family: 'Raleway', sans-serif; /*simča*/
+    font-weight: 400;                   /*simča*/
+    font-style: italic;                 /*simča*/
+    font-size: 160%;                    /*simča*/
+}
+
+h2{                                     /*simča*/
+    font-family: 'Arvo', serif;         /*simča*/
+    font-weight: 700;                   /*simča*/
+    text-transform: uppercase;          /*simča*/
+    font-size: xx-large;                /*simča*/
+    text-align: center;                 /*simča*/
+}
+
+.site__content {
 }
 
 .site__nav {
@@ -181,11 +242,27 @@ p {
 .news__article h3 {
     grid-column: 2 / span 1;
     grid-row: 1 / span 1;
+    font-family: 'Oswald', sans-serif;          /*simča*/
+    font-size: 170%;                            /*simča*/
+    font-variant: small-caps;                   /*simča*/
+    color: #005300;                             /*simča*/
+}
+
+.news__article h4{                              /*simča*/ /*až budou ty články, bude třeba tam mít perex, dala jsem mu h4*/
+    grid-column: 2 / span 1;                    /*simča*/
+    grid-row: 2 / span 1;                       /*simča*/
+    font-family: 'Raleway', sans-serif;         /*simča*/
+    font-style: italic;                         /*simča*/
 }
 
 .news__article p {
     grid-column: 2 / span 1;
-    grid-row: 2 / span 1;
+    grid-row: 3 / span 1;                       /*simča -upraveno row 3*/
+    font-family: 'Roboto Condensed', sans-serif;/*simča*/
+}
+
+.news__article time{ /*simča*/
+
 }
 
 .grid__article-detail {
