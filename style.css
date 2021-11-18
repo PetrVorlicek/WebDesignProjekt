@@ -399,10 +399,6 @@ h2{                                     /*simča*/
 }
 
 /*Autoři / Kariéra*/
-.site__authors {
-    text-align: justify;
-    grid-row-gap: 5px;
-}
 
 .info__aside, .info__author, .info__info {
     padding: 25px;
