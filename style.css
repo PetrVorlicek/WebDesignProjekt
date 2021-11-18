@@ -144,7 +144,7 @@ h2{                                     /*simča*/
 }
 
 /*portraits*/
-.portraits {
+.about__portraits {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -154,7 +154,7 @@ h2{                                     /*simča*/
     background-color: #90A955;
 }
 
-.portraits__portrait {
+.about__portraits_portrait {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -166,11 +166,11 @@ h2{                                     /*simča*/
     height: 200px;
 }
 
-.about {
+.about__info {
     margin: 10px 25px;
 }
 
-.about__secondary {
+.about__info_secondary {
     display: none;
 }
 
@@ -398,6 +398,55 @@ h2{                                     /*simča*/
     border-color: #005300;
 }
 
+/*Autoři / Kariéra*/
+.site__authors {
+    text-align: justify;
+    grid-row-gap: 5px;
+}
+
+.info__aside, .info__author, .info__info {
+    padding: 25px;
+}
+
+.info__author {
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0;
+}
+
+.info__author img {
+    width: 250px;
+}
+.info__author figcaption {
+    text-align: center;
+}
+
+.info__author div, .info__author figure {
+    margin: auto;
+    padding: 10px;
+}
+
+.info__author div {
+    background-color: #90A955;
+    height: 100%;
+}
+
+.info__author figure {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+}
+
+.info__info {
+    margin: auto;
+}
+
+.info__aside {
+    color: white;
+    background-color: #193b09;
+}
+
 @media only screen and (min-width: 813px) /* větší než iphone X */
 {
     .site__nav {
@@ -424,25 +473,30 @@ h2{                                     /*simča*/
         display: block;
     }
     /*portraits*/
-    .grid__authors {
+    .about {
         display: grid;
         grid-template-columns: 1fr 2fr;
         grid-template-areas: "portraits about";
     }
 
-    .portraits {
+    .about__portraits {
         grid-area: portraits;
         flex-direction: column;
         height: 100%;
         padding: 10px 0;
     }
 
-    .about {
+    .about__info {
         grid-area: about;
     }
 
-    .about__secondary {
+    .about__info_secondary {
         display: block;
+    }
+
+    /*Autoři / Kariéra*/
+    .info__author {
+        flex-direction: row;
     }
 }
 
@@ -486,7 +540,7 @@ h2{                                     /*simča*/
                                 "about";
     }
 
-    .portraits {
+    .about__portraits {
         height: 100%;
         flex-direction: row;
         margin: 0;
@@ -497,7 +551,7 @@ h2{                                     /*simča*/
         height: 80%;
     }
 
-    .about__secondary {
+    .about__info_secondary {
         display: none;
     }
 
@@ -526,7 +580,6 @@ h2{                                     /*simča*/
         width: 200px;
     }
 
-
     /*weather*/
     .weather {
         grid-template-columns: 1fr 1fr;
@@ -544,7 +597,7 @@ h2{                                     /*simča*/
         grid-template-rows: 1fr 2fr;
     }
 
-    .about__secondary{
+    .about__info_secondary {
         display: block;
     }
 }
