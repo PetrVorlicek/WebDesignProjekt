@@ -225,7 +225,7 @@ h2{                                     /*simča*/
 /*news*/
 .news {
     display: grid;
-    grid-template-rows: 75px 1fr;
+    grid-template-rows: auto 1fr;
     grid-template-areas: "nav"
                             ".";
 }
@@ -235,6 +235,7 @@ h2{                                     /*simča*/
 }
 
 .news__nav {
+    padding: 15px 0;
     grid-area: nav;
     background-color: #193b09;
 }
