@@ -267,6 +267,8 @@ h2{                                     /*simča*/
 }
 
 .news__article img {
+    border: 5px solid darkgreen;
+    border-radius: 10px;
     height: 250px;
     grid-area: img;
 }
@@ -276,7 +278,6 @@ h2{                                     /*simča*/
     font-family: 'Oswald', sans-serif;          /*simča*/
     font-size: 170%;                            /*simča*/
     font-variant: small-caps;                   /*simča*/
-                                 /*simča*/
 }
 
 .news__article a:link, a:visited {
@@ -291,17 +292,17 @@ h2{                                     /*simča*/
 }
 
 .news__article h4{                              /*simča*/ /*až budou ty články, bude třeba tam mít perex, dala jsem mu h4*/
-    grid-area: perex;                       /*simča*/
+    grid-area: perex;                           /*simča*/
     font-family: 'Raleway', sans-serif;         /*simča*/
     font-style: italic;                         /*simča*/
 }
 
 .news__article p {
-    grid-area: text; /*simča -upraveno row 3*/
+    grid-area: text;                            /*simča -upraveno row 3*/
     font-family: 'Roboto Condensed', sans-serif;/*simča*/
 }
 
-.news__article time{ /*simča*/
+.news__article time{                            /*simča*/
 
 }
 
