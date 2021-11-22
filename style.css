@@ -1,10 +1,40 @@
-html {
-    font-family: sans-serif;
+
+/* FONTY OD SIMČI začátek
+.site__header h1{
+    font-family: 'Arvo', serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 350%;
+}
+.site__header p {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+    font-style: italic;
+    font-size: 160%;
 }
 
-.debug {
-    border: 1px solid red;
+h2{
+    font-family: 'Arvo', serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: xx-large;
+    text-align: center;
 }
+
+h3 {
+    font-family: 'Oswald', sans-serif;
+    font-size: x-large;
+    font-variant: small-caps;
+}
+
+h4{
+    font-family: 'Raleway', sans-serif;
+}
+
+p {
+    font-family: 'Roboto Condensed', sans-serif;
+}
+FONTY OD SIMČI konec */
 
 /*site*/
 .grid {
@@ -27,10 +57,43 @@ html {
     grid-area: news;
 }
 
+.grid__authors, .grid__weather, .grid__news {
+    margin-top: 10px;
+}
+
+.site {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
 .site__header, .grid__authors {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.site__header h1{                       /*simča*/
+    font-family: 'Arvo', serif;         /*simča*/
+    font-weight: 700;                   /*simča*/
+    text-transform: uppercase;          /*simča*/
+    font-size: 350%;
+    text-align: center                  /*simča*/
+}
+
+.site__header p {                       /*simča*/
+    font-family: 'Raleway', sans-serif; /*simča*/
+    font-weight: 400;                   /*simča*/
+    font-style: italic;                 /*simča*/
+    font-size: 160%;                    /*simča*/
+}
+
+h2{                                     /*simča*/
+    font-family: 'Arvo', serif;         /*simča*/
+    font-weight: 700;                   /*simča*/
+    text-transform: uppercase;          /*simča*/
+    font-size: xx-large;                /*simča*/
+    text-align: center;                 /*simča*/
 }
 
 .site__content {
@@ -54,38 +117,34 @@ html {
     height: 50px;
 }
 
-.site__nav li, .site__nav input {
+.site__nav li, .site__nav input{
     display: block;
     height: 20px;
     width: 125px;
     margin: 5px 0;
 }
 
-.site__nav a {
-    text-align: center;
-    border: 2px solid green;
+.site__nav a, .news__nav a{
     background-color: white;
+    border: 2px solid #193b09;
+    text-align: center;
 }
 
 
 .site__footer {
-    position: relative;
-    bottom: 0;
-    width: auto;
+    margin-top: auto;
     color: white;
     background-color: #193b09;
     height: 20px;
     padding: 80px 10px 50px 10px;
-    margin: 0;
 }
 
-.news {
-    color: white;
+.news{
     background-color: #afc185;
 }
 
 /*portraits*/
-.portraits {
+.about__portraits {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -95,7 +154,7 @@ html {
     background-color: #90A955;
 }
 
-.portraits__portrait {
+.about__portraits_portrait {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -107,15 +166,11 @@ html {
     height: 200px;
 }
 
-.about {
+.about__info {
     margin: 10px 25px;
 }
 
-.about p {
-    text-align: justify;
-}
-
-.about__secondary {
+.about__info_secondary {
     display: none;
 }
 
@@ -168,31 +223,227 @@ html {
 }
 
 /*news*/
+.news {
+    display: grid;
+    grid-template-rows: auto 1fr;
+    grid-template-areas: "nav"
+                            ".";
+}
+
+.news seciton {
+    grid-column: 1 / span 2;
+}
+
+.news__nav {
+    padding: 15px 0;
+    grid-area: nav;
+    background-color: #193b09;
+}
+
+.news__nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    margin: auto;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.news__nav li {
+    display: block;
+    width:150px;
+    margin: 5px 0;
+}
 
 .news__article {
     display: grid;
     grid-template-columns: 250px 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas: "img header"
+                            "img perex"
+                            "text text";
     margin: 10px 25px;
-    grid-gap: 10px;
+    grid-gap: 5px;
 }
 
 .news__article img {
+    border: 5px solid darkgreen;
+    border-radius: 10px;
     height: 250px;
-    grid-column: 1 / span 1;
-    grid-row: 1 / span 2;
+    grid-area: img;
 }
 
 .news__article h3 {
-    grid-column: 2 / span 1;
-    grid-row: 1 / span 1;
+    grid-area: header;
+    font-family: 'Oswald', sans-serif;          /*simča*/
+    font-size: 170%;                            /*simča*/
+    font-variant: small-caps;                   /*simča*/
+}
+
+.news__article a:link, a:visited {
+    text-decoration: none;
+    color: #005300;
+}
+
+.news__article a:hover {
+    text-decoration: underline;
+    color: white;
+    transition-duration: 0.5s;
+}
+
+.news__article h4{                              /*simča*/ /*až budou ty články, bude třeba tam mít perex, dala jsem mu h4*/
+    grid-area: perex;                           /*simča*/
+    font-family: 'Raleway', sans-serif;         /*simča*/
+    font-style: italic;                         /*simča*/
 }
 
 .news__article p {
-    grid-column: 2 / span 1;
-    grid-row: 2 / span 1;
+    grid-area: text;                            /*simča -upraveno row 3*/
+    font-family: 'Roboto Condensed', sans-serif;/*simča*/
 }
 
+.news__article time{                            /*simča*/
+
+}
+
+.grid__article-detail {
+    margin: 5px 25px;
+}
+
+/*Detail článku*/
+.detail {
+    padding: 25px 50px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto 1fr auto 50px;
+    grid-row-gap: 75px;
+    grid-template-areas: "header"
+                            "image"
+                            "content"
+                            "discussion"
+                            "footer";
+}
+
+.detail_header {
+    grid-area: header;
+}
+
+.detail__images {
+    grid-area: image;
+}
+
+.detail__images_image img {
+    max-width: 100%;
+}
+
+.detail__content {
+    grid-area: content;
+}
+.detail__footer {
+    grid-area: footer;
+    opacity: 75%;
+}
+
+.detail__discussion {
+    grid-area: discussion;
+    background-color: #afc185;
+}
+
+.detail__discussion_comments {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.detail__discussion_comments li {
+    background-color: #90A955;
+    padding: 10px 50px;
+    margin: 10px 0;
+}
+
+.detail__discussion_add
+{
+    padding: 10px 10%;
+}
+.detail__discussion_add label, input {
+    display: block;
+}
+
+#detail__discussion_add-comment {
+    width: 100%;
+    height: 250px;
+    resize: none;
+}
+
+/*Kategorie*/
+
+.site__categories {
+    display: flex;
+    flex-direction: column;
+    background-color: #90A955;
+}
+
+.category {
+    border: 3px solid #193b09;
+    border-radius: 15px;
+    background-color: #afc185;
+    opacity: 90%;
+    margin: 5px
+}
+
+.category a {
+    margin-left: 25px;
+}
+
+.category hr {
+    border-color: #005300;
+}
+
+/*Autoři / Kariéra*/
+
+.info__aside, .info__author, .info__info {
+    padding: 25px;
+}
+
+.info__author {
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0;
+}
+
+.info__author img {
+    width: 250px;
+}
+.info__author figcaption {
+    text-align: center;
+}
+
+.info__author div, .info__author figure {
+    margin: auto;
+    padding: 10px;
+}
+
+.info__author div {
+    background-color: #90A955;
+    height: 100%;
+}
+
+.info__author figure {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+}
+
+.info__info {
+    margin: auto;
+}
+
+.info__aside {
+    color: white;
+    background-color: #193b09;
+}
 
 @media only screen and (min-width: 813px) /* větší než iphone X */
 {
@@ -220,25 +471,30 @@ html {
         display: block;
     }
     /*portraits*/
-    .grid__authors {
+    .about {
         display: grid;
         grid-template-columns: 1fr 2fr;
         grid-template-areas: "portraits about";
     }
 
-    .portraits {
+    .about__portraits {
         grid-area: portraits;
         flex-direction: column;
         height: 100%;
         padding: 10px 0;
     }
 
-    .about {
+    .about__info {
         grid-area: about;
     }
 
-    .about__secondary {
+    .about__info_secondary {
         display: block;
+    }
+
+    /*Autoři / Kariéra*/
+    .info__author {
+        flex-direction: row;
     }
 }
 
@@ -251,13 +507,15 @@ html {
         grid-template-areas:    "authors weather"
                                 "news news";
     }
-    .site__nav ul {
+    .site__nav ul{
         justify-content: flex-end;
     }
 
     .news {
         display: grid;
         grid-template-columns: 1fr 1fr;
+        grid-template-areas: "nav nav"
+                                ". .";
         grid-column-gap: 10px;
     }
 
@@ -280,7 +538,7 @@ html {
                                 "about";
     }
 
-    .portraits {
+    .about__portraits {
         height: 100%;
         flex-direction: row;
         margin: 0;
@@ -291,17 +549,23 @@ html {
         height: 80%;
     }
 
-    .about {
-        margin:0;
-    }
-
-    .about__secondary {
+    .about__info_secondary {
         display: none;
     }
 
-}
+    /*Detail*/
+    .detail {
+        grid-template-columns: 1fr 3fr;
+        grid-template-rows: auto 1fr auto 50px;
+        grid-row-gap: 75px;
+        grid-template-areas: "header header"
+                            "image content"
+                            "discussion discussion"
+                            "footer footer";
+    }
 
-@media only screen and (min-width: 1400px) /*  */
+}
+@media only screen and (min-width: 1400px)
 {
     .grid {
         grid-template-columns: 2fr 1fr;
@@ -313,7 +577,6 @@ html {
     .site__nav li {
         width: 200px;
     }
-
 
     /*weather*/
     .weather {
@@ -332,7 +595,7 @@ html {
         grid-template-rows: 1fr 2fr;
     }
 
-    .about__secondary{
+    .about__info_secondary {
         display: block;
     }
 }

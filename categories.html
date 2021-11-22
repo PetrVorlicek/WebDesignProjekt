@@ -1,14 +1,18 @@
 <!DOCTYPE HTML>
-<html lang="cs">
+<html lang="cs" xmlns="http://www.w3.org/1999/html">
 <head>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="normalize.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400&family=Oswald&family=Raleway:ital,wght@0,300;1,400&family=Roboto+Condensed:ital@0;1&display=swap');
+    </style>
     <meta charset="UTF-8">
     <title>Univerzitní zpravodaj - Kategorie</title>
 </head>
 <body class="site">
 <nav class="site__nav">
     <ul>
+        <li><a href="#top">Nahoru</a></li>
         <li>
             </form>
             <input type="text">
@@ -21,13 +25,157 @@
     </ul>
 </nav>
 
-<header class="site__header">
-    <h1>Kategorie</h1>
+<header class="site__header" id="top">
+    <h2>Kategorie</h2>
     <p>Vaše univerzitní noviny</p>
 </header>
 
-<main class="site__content grid">
+<main class="site__categories">
+    <nav class="news__nav">
+        <ul>
+            <li><a href="#aktuality">Aktuality</a></li>
+            <li><a href="#akce">Akce</a></li>
+            <li><a href="#uspechyczu">Úspěchy ČZU</a></li>
+            <li><a href="#vedaavyzkum">Věda a výzkum</a></li>
+            <li><a href="#pracovniprilezitosti">Pracovní příležitosti</a></li>
+            <li><a href="#politikauvnitrczu">Politika uvnitř ČZU</a></li>
+        </ul>
+    </nav>
+    <section class="category" id="aktuality">
+        <h2>Aktuality</h2>
 
+        <hr>
+        <article class="news__article">
+            <img src="static/1.png"/>
+            <h3><a href="articles/article-promoce.html">Informace k promocím</a></h3>
+            <h4>
+                V současnosti probíhají na naší univerzitě státní závěrečné zkoušky, kterým studenti posledních ročníků završují svá studia na ČZU.
+            </h4>
+        </article>
+        <article class="news__article">
+            <img src="static/a.jpg"/>
+            <h3><a href="articles/article-podminkyStudia.html">Zajištění podmínek studia na ČZU od 26. 4. 2021</a></h3>
+            <h4>
+                S platností od 26. 4. 2021 je možná účast na klinické a praktické výuce a praxi studentů posledních ročníků.
+            </h4>
+        </article>
+        <article class="news__article">
+            <img src="static/2.jpg"/>
+            <h3><a href="articles/article-pomahatAChranit.html">Česká zemědělská univerzita pomáhá chránit obyvatele a majetek Suchdola</a></h3>
+            <h4>
+                Formou pravidelných večerních a celonočních obchůzek nabídl Odbor bezpečnosti České zemědělské univerzity v Praze pomoc s ochranou obyvatel a majetku Suchdola, městské části, v níž univerzita sídlí.
+            </h4>
+        </article>
+        <article class="news__article">
+            <img src="static/3.jpg"/>
+            <h3><a href="articles/article-dezinfekcniRam.html">Dezinfekční rám a měření teploty na ČZU</a></h3>
+            <h4>
+                Umístění dezinfekčního rámu s bezkontaktním měření teploty na ČZU. Pro zamezení šíření nákazy COVID-19 děláme maximum.
+            </h4>
+        </article>
+        <article class="news__article">
+            <img src="static/4.jpg"/>
+            <h3><a href="articles/article-odber.html">Odběrové testovací centrum na přítomnost COVID-19.</a></h3>
+            <h4>
+                ČZU jako první vysoká škola zřídila odběrové testovací centrum na přítomnost COVID-19. Pozitivních případů během prvního dne: 1 %
+            </h4>
+        </article>
+        <article class="news__article">
+            <img src="static/5.jpg"/>
+            <h3><a href="articles/article-merch.html">Náš merch až k vám domů!</a></h3>
+            <h4>
+                Univerzita situaci kolem šíření koronaviru 2019-nCoV pečlivě sleduje a zavádí preventivní opatření k omezení šíření nákazy.
+            </h4>
+        </article>
+        <article class="news__article">
+            <img src="static/6.jpg"/>
+            <h3><a href="articles/article-koronavir.html">ČZU monitoruje vývoj šíření koronaviru.</a></h3>
+            <h4>
+                Univerzita situaci kolem šíření koronaviru 2019-nCoV pečlivě sleduje a zavádí preventivní opatření k omezení šíření nákazy.
+            </h4>
+        </article>
+        <article class="news__article">
+            <img src="static/7.jpg"/>
+            <h3><a href="articles/article-rektorat.html">Omezený provoz rektorátu od 11. 3. 2020</a></h3>
+            <h4>
+                Aktualizace informací k provozu univerzity.
+            </h4>
+        </article>
+    </section>
+    <section class="category" id="akce">
+        <h2>Akce</h2>
+
+        <hr>
+        <article class="news__article">
+            <img src="static/image_placeholder.jpeg"/>
+            <h3><a href="articles/article.html">Den s Formulí od CULS Prague Formula Racing 19. října</a></h3>
+            <h4>
+                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Etiam bibendum elit eget erat. Proin in tellus sit amet nibh dignissim sagittis. In laoreet, magna id viverra tincidunt, sem odio bibendum justo, vel imperdiet sapien wisi sed libero.
+            </h4>
+        </article>
+        <article class="news__article">
+            <img src="static/image_placeholder.jpeg"/>
+            <h3><a href="articles/article.html">Po stopách stopatnáctileté historie České zemědělské univerzity</a></h3>
+            <h4>
+                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Etiam bibendum elit eget erat. Proin in tellus sit amet nibh dignissim sagittis. In laoreet, magna id viverra tincidunt, sem odio bibendum justo, vel imperdiet sapien wisi sed libero.
+            </h4>
+        </article>
+        <article class="news__article">
+            <img src="static/image_placeholder.jpeg"/>
+            <h3><a href="articles/article.html">Ztraťte se s námi v nočním čase, provedeme vás světem vědců, kteří vás naučí vědu milovat</a></h3>
+            <h4>
+                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Etiam bibendum elit eget erat. Proin in tellus sit amet nibh dignissim sagittis. In laoreet, magna id viverra tincidunt, sem odio bibendum justo, vel imperdiet sapien wisi sed libero.
+            </h4>
+        </article>
+        <article class="news__article">
+            <img src="static/image_placeholder.jpeg"/>
+            <h3><a href="articles/article.html">I naše univerzita je součástí akce VědaFest!</a></h3>
+            <h4>
+                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Etiam bibendum elit eget erat. Proin in tellus sit amet nibh dignissim sagittis. In laoreet, magna id viverra tincidunt, sem odio bibendum justo, vel imperdiet sapien wisi sed libero.
+            </h4>
+        </article>
+        <article class="news__article">
+            <img src="static/image_placeholder.jpeg"/>
+            <h3><a href="articles/article.html">Den otevřených dveří on-line 19. března 2021</a></h3>
+            <h4>
+                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Etiam bibendum elit eget erat. Proin in tellus sit amet nibh dignissim sagittis. In laoreet, magna id viverra tincidunt, sem odio bibendum justo, vel imperdiet sapien wisi sed libero.
+            </h4>
+        </article>
+        <article class="news__article">
+            <img src="static/image_placeholder.jpeg"/>
+            <h3><a href="articles/article.html">AKTUALIZOVÁNO! Den otevřených dveří na ČZU proběhne 23. 1. ONLINE</a></h3>
+            <h4>
+                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Etiam bibendum elit eget erat. Proin in tellus sit amet nibh dignissim sagittis. In laoreet, magna id viverra tincidunt, sem odio bibendum justo, vel imperdiet sapien wisi sed libero.
+            </h4>
+        </article>
+        <article class="news__article">
+            <img src="static/image_placeholder.jpeg"/>
+            <h3><a href="articles/article.html">Gaudeamus - veletrh vzdělání ONLINE 22. ledna 2021</a></h3>
+            <p>
+                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Etiam bibendum elit eget erat. Proin in tellus sit amet nibh dignissim sagittis. In laoreet, magna id viverra tincidunt, sem odio bibendum justo, vel imperdiet sapien wisi sed libero.
+            </p>
+        </article>
+    </section>
+    <section class="category" id="uspechyczu">
+        <h2>Úspěchy ČZU</h2>
+
+        <hr>
+    </section>
+    <section class="category" id="vedaavyzkum">
+        <h2>Věda a výzkum</h2>
+
+        <hr>
+    </section>
+    <section class="category" id="pracovniprilezitosti">
+        <h2>Pracovní příležitosti</h2>
+
+        <hr>
+    </section>
+    <section class="category" id="politikauvnitrczu">
+        <h2>Politika uvnitř ČZU</h2>
+
+        <hr>
+    </section>
 </main>
 
 <footer class="site__footer">
