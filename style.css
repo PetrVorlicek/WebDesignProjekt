@@ -73,27 +73,37 @@ FONTY OD SIMČI konec */
     align-items: center;
 }
 
-.site__header h1{                       /*simča*/
-    font-family: 'Arvo', serif;         /*simča*/
-    font-weight: 700;                   /*simča*/
-    text-transform: uppercase;          /*simča*/
+.site__header h1{                       /*UNIVERZITNÍ ZPRAVODAJ*/
+    font-family: 'Arvo', serif;
+    font-weight: 700;
+    text-transform: uppercase;
     font-size: 350%;
-    text-align: center                  /*simča*/
+    text-align: center
 }
 
-.site__header p {                       /*simča*/
-    font-family: 'Raleway', sans-serif; /*simča*/
-    font-weight: 400;                   /*simča*/
-    font-style: italic;                 /*simča*/
-    font-size: 160%;                    /*simča*/
+.site__header h2 {                      /*KATEGORIE*/
+    font-family: "Times New Roman", Times, serif;
+    font-weight: 700;
+    font-size: 350%;
 }
 
-h2{                                     /*simča*/
-    font-family: 'Arvo', serif;         /*simča*/
-    font-weight: 700;                   /*simča*/
-    text-transform: uppercase;          /*simča*/
-    font-size: xx-large;                /*simča*/
-    text-align: center;                 /*simča*/
+.site__header p {                       /*Vaše univerzitní noviny*/
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+    font-style: italic;
+    font-size: 160%;
+}
+
+h2{                                     /*Aktuality.. a název článku v detailu*/
+    font-family: 'Merriweather', serif;
+    font-weight: 900;
+    text-transform: uppercase;
+    font-size: 230%;
+    text-align: center;
+}
+
+p {
+    font-family: 'Roboto Condensed', sans-serif;
 }
 
 .site__content {
@@ -230,7 +240,7 @@ h2{                                     /*simča*/
                             ".";
 }
 
-.news seciton {
+.news section {
     grid-column: 1 / span 2;
 }
 
@@ -275,9 +285,9 @@ h2{                                     /*simča*/
 
 .news__article h3 {
     grid-area: header;
-    font-family: 'Oswald', sans-serif;          /*simča*/
-    font-size: 170%;                            /*simča*/
-    font-variant: small-caps;                   /*simča*/
+    font-family: 'Oswald', sans-serif;          /*název článku*/
+    font-size: 180%;
+    font-variant: small-caps;
 }
 
 .news__article a:link, a:visited {
@@ -291,19 +301,15 @@ h2{                                     /*simča*/
     transition-duration: 0.5s;
 }
 
-.news__article h4{                              /*simča*/ /*až budou ty články, bude třeba tam mít perex, dala jsem mu h4*/
-    grid-area: perex;                           /*simča*/
-    font-family: 'Raleway', sans-serif;         /*simča*/
-    font-style: italic;                         /*simča*/
+.news__article h4{                              /*perex*/
+    grid-area: perex;
+    font-family: 'Raleway', sans-serif;
+    font-style: italic;
 }
 
 .news__article p {
     grid-area: text;                            /*simča -upraveno row 3*/
-    font-family: 'Roboto Condensed', sans-serif;/*simča*/
-}
-
-.news__article time{                            /*simča*/
-
+    font-family: 'Roboto Condensed', sans-serif;
 }
 
 .grid__article-detail {
@@ -324,6 +330,18 @@ h2{                                     /*simča*/
                             "footer";
 }
 
+.detail h4 {
+    font-family: 'Merriweather', serif;             /*Nadpis Komentáře*/
+    font-size: 170%;
+    text-align: center;
+}
+
+.detail h5 {
+    font-family: Arial;
+    font-variant: small-caps;
+    font-size: 130%;
+}
+
 .detail_header {
     grid-area: header;
 }
@@ -338,15 +356,19 @@ h2{                                     /*simča*/
 
 .detail__content {
     grid-area: content;
+    font-family: 'Roboto Condensed', sans-serif;    /*Text článku v detailu*/
+    font-size: 130%;
 }
 .detail__footer {
     grid-area: footer;
     opacity: 75%;
+    font-family: 'Roboto Condensed', sans-serif;
 }
 
 .detail__discussion {
     grid-area: discussion;
     background-color: #afc185;
+    font-size: 120%;
 }
 
 .detail__discussion_comments {
