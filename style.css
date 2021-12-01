@@ -1,40 +1,9 @@
-
-/* FONTY OD SIMČI začátek
-.site__header h1{
-    font-family: 'Arvo', serif;
-    font-weight: 700;
-    text-transform: uppercase;
-    font-size: 350%;
+/*Custom properties*/
+:root {
+--header-font: 'Arvo', serif;
+--secondary-font: 'Raleway', sans-serif;
+--main-font: 'Roboto Condensed', sans-serif;
 }
-.site__header p {
-    font-family: 'Raleway', sans-serif;
-    font-weight: 400;
-    font-style: italic;
-    font-size: 160%;
-}
-
-h2{
-    font-family: 'Arvo', serif;
-    font-weight: 700;
-    text-transform: uppercase;
-    font-size: xx-large;
-    text-align: center;
-}
-
-h3 {
-    font-family: 'Oswald', sans-serif;
-    font-size: x-large;
-    font-variant: small-caps;
-}
-
-h4{
-    font-family: 'Raleway', sans-serif;
-}
-
-p {
-    font-family: 'Roboto Condensed', sans-serif;
-}
-FONTY OD SIMČI konec */
 
 /*site*/
 .grid {
@@ -74,7 +43,7 @@ FONTY OD SIMČI konec */
 }
 
 .site__header h1{                       /*UNIVERZITNÍ ZPRAVODAJ*/
-    font-family: 'Arvo', serif;
+    font-family: var(--header-font);
     font-weight: 700;
     text-transform: uppercase;
     font-size: 350%;
@@ -82,20 +51,20 @@ FONTY OD SIMČI konec */
 }
 
 .site__header h2 {                      /*KATEGORIE*/
-    font-family: "Times New Roman", Times, serif;
+    font-family: var(--header-font);
     font-weight: 700;
     font-size: 350%;
 }
 
 .site__header p {                       /*Vaše univerzitní noviny*/
-    font-family: 'Raleway', sans-serif;
+    font-family: var(--secondary-font);
     font-weight: 400;
     font-style: italic;
     font-size: 160%;
 }
 
 h2{                                     /*Aktuality.. a název článku v detailu*/
-    font-family: 'Merriweather', serif;
+    font-family: var(--secondary-font);
     font-weight: 900;
     text-transform: uppercase;
     font-size: 230%;
@@ -103,11 +72,9 @@ h2{                                     /*Aktuality.. a název článku v detail
 }
 
 p {
-    font-family: 'Roboto Condensed', sans-serif;
+    font-family: var(--main-font);
 }
 
-.site__content {
-}
 
 .site__nav {
     width: 100%;
@@ -124,7 +91,7 @@ p {
     justify-content: space-between;
     margin: auto;
     flex-direction: row;
-    height: 50px;
+    min-height: 50px;
 }
 
 .site__nav li, .site__nav input{
@@ -173,7 +140,7 @@ p {
 }
 
 .portraits__portrait_img {
-    height: 200px;
+    height: 150px;
 }
 
 .about__info {
@@ -191,7 +158,7 @@ p {
     grid-template-columns: 2fr 1fr;
     grid-template-rows: 1fr 1fr;
     grid-template-areas: "summary temp"
-                            "summary rain";
+                        "summary rain";
 }
 
 .weather__fig {
@@ -232,6 +199,10 @@ p {
     display: none;
 }
 
+.weather p {
+    font-size: 2rem;
+}
+
 /*news*/
 .news {
     display: grid;
@@ -267,27 +238,34 @@ p {
 
 .news__article {
     display: grid;
-    grid-template-columns: 250px 1fr;
-    grid-template-rows: auto 1fr auto;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto 1fr;
     grid-template-areas: "img header"
-                            "img perex"
-                            "text text";
+                      "img perex";
     margin: 10px 25px;
     grid-gap: 5px;
+    border: 5px solid darkgreen;
+    border-radius: 5px;
 }
 
 .news__article img {
-    border: 5px solid darkgreen;
-    border-radius: 10px;
-    height: 250px;
+    max-width: 90%;
+    margin: auto;
     grid-area: img;
 }
 
 .news__article h3 {
     grid-area: header;
-    font-family: 'Oswald', sans-serif;          /*název článku*/
+    font-family: var(--secondary-font);          /*název článku*/
     font-size: 180%;
     font-variant: small-caps;
+    text-indent: 0;
+}
+
+.news__article h4 {                              /*perex*/
+    grid-area: perex;
+    font-family: var(--secondary-font);
+    font-style: italic;
 }
 
 .news__article a:link, a:visited {
@@ -299,17 +277,6 @@ p {
     text-decoration: underline;
     color: white;
     transition-duration: 0.5s;
-}
-
-.news__article h4{                              /*perex*/
-    grid-area: perex;
-    font-family: 'Raleway', sans-serif;
-    font-style: italic;
-}
-
-.news__article p {
-    grid-area: text;                            /*simča -upraveno row 3*/
-    font-family: 'Roboto Condensed', sans-serif;
 }
 
 .grid__article-detail {
@@ -331,23 +298,24 @@ p {
 }
 
 .detail h4 {
-    font-family: 'Merriweather', serif;             /*Nadpis Komentáře*/
+    font-family: var(--secondary-font);             /*Nadpis Komentáře*/
     font-size: 170%;
     text-align: center;
 }
 
 .detail h5 {
-    font-family: Arial;
+    font-family: var(--main-font);
     font-variant: small-caps;
     font-size: 130%;
 }
 
-.detail_header {
+.detail__header {
     grid-area: header;
 }
 
 .detail__images {
     grid-area: image;
+    margin: auto;
 }
 
 .detail__images_image img {
@@ -356,13 +324,13 @@ p {
 
 .detail__content {
     grid-area: content;
-    font-family: 'Roboto Condensed', sans-serif;    /*Text článku v detailu*/
+    font-family: var(--main-font);    /*Text článku v detailu*/
     font-size: 130%;
 }
 .detail__footer {
     grid-area: footer;
     opacity: 75%;
-    font-family: 'Roboto Condensed', sans-serif;
+    font-family: var(--secondary-font);
 }
 
 .detail__discussion {
@@ -412,10 +380,6 @@ p {
     background-color: #afc185;
     opacity: 90%;
     margin: 5px
-}
-
-.category a {
-    margin-left: 25px;
 }
 
 .category hr {
@@ -514,6 +478,10 @@ p {
         display: block;
     }
 
+    .news__article {
+        grid-template-columns: 1fr 2fr;
+    }
+
     /*Autoři / Kariéra*/
     .info__author {
         flex-direction: row;
@@ -539,6 +507,10 @@ p {
         grid-template-areas: "nav nav"
                                 ". .";
         grid-column-gap: 10px;
+    }
+
+    .news__article {
+        grid-template-columns: 1fr 1fr;
     }
 
     /*weather*/
@@ -584,6 +556,11 @@ p {
                             "image content"
                             "discussion discussion"
                             "footer footer";
+    }
+
+    .category {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
     }
 
 }
